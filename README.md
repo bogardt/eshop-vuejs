@@ -132,14 +132,14 @@ docker run -d \
 ## Add items to mongo
 
 This will insert the sample data into your database.
-# 1) Aller dans l’API
+# 1) Go to api folder
 cd shop-starter/shop-api
 
-# 2) Installer (si pas fait)
+# 2) Install (if not done)
 npm install
 
-# 3) (Optionnel) Réinitialiser les collections avant injection
+# 3) (Optional) Reset collections before injection
 RESET=true node src/seed/inject.js
 
-# 4) Injection simple (upsert par slug)
+# 4) Simple injection (upsert by slug)
 node src/seed/inject.js
