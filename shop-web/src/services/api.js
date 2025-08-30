@@ -1,3 +1,4 @@
+// shop-web/src/services/api.js
 import axios from "axios";
 
 const api = axios.create({
@@ -17,5 +18,9 @@ export default {
   },
   getProduct(slug) {
     return api.get(`/products/${slug}`).then(r => r.data);
+  },
+  // NEW: Create order (checkout)
+  createOrder(payload) {
+    return api.post("/orders", payload).then(r => r.data);
   }
 };
